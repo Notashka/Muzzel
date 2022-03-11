@@ -5,8 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Muzzel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Muzzel" Height="450" Width="800">
     <Grid>
-       
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+
+        <DockPanel>
+            <Image Source="/Image/Намордник.ico"/>
+        </DockPanel>
+        
+        <DockPanel Grid.ColumnSpan="2">
+            <TextBlock Text="Намордник" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="35"/>
+        </DockPanel>
+
+        <Frame x:Name="frmMain" Grid.ColumnSpan="2" Grid.Row="1" NavigationUIVisibility="Hidden" />
     </Grid>
 </Window>
