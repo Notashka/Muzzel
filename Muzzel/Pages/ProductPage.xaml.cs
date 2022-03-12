@@ -12,27 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Muzzel.Classes;
-using Muzzel.Pages;
 
-namespace Muzzel
+namespace Muzzel.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для ProductPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ProductPage : Page
     {
-        public static class ListProduct
-        {
-            public static Frame frm;
-        }
-
-        public MainWindow()
+        public ProductPage()
         {
             InitializeComponent();
-            BaseConnect.baseConnect = new Entities();
-            ListProduct.frm = frmMain;
-            frmMain.Navigate(new ProductPage());
         }
     }
 }
